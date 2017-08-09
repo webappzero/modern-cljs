@@ -184,7 +184,8 @@ Options:
 
 Aside from triggering the execution of the CLJS recompilation whenever a
 change in the CLJS source code is saved, the `watch` task can even
-substitute the `wait` tasks, because it is not blocking either.
+substitute the `wait` tasks, because it blocks while watching the
+filesystem for changes to specified files.
 
 It seems that just inserting the `watch` task before calling the
 `cljs` task we should be able to trigger the source recompilation.
